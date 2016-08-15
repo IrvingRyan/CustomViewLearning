@@ -10,6 +10,7 @@ import android.graphics.Region;
 import android.graphics.RegionIterator;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -17,6 +18,7 @@ import android.view.View;
  * Created by wentao on 2016/8/15.
  */
 public class View5 extends View {
+    private String TAG="View5";
 
     private Paint paint;
 
@@ -89,5 +91,38 @@ public class View5 extends View {
         while (iterator.next(rect)){
             canvas.drawRect(rect, paint1);
         }
+
+
+        /**
+         *
+            //几个判断方法
+            public native boolean isEmpty();//判断该区域是否为空
+            public native boolean isRect(); //是否是一个矩阵
+            public native boolean isComplex();//是否是多个矩阵组合
+
+
+            //一系列的getBound方法，返回一个Region的边界
+            public Rect getBounds()
+            public boolean getBounds(Rect r)
+            public Path getBoundaryPath()
+            public boolean getBoundaryPath(Path path)
+
+            //一系列的判断是否包含某点 和是否相交
+            public native boolean contains(int x, int y);//是否包含某点
+            public boolean quickContains(Rect r)   //是否包含某矩形
+            public native boolean quickContains(int left, int top, int right,
+            int bottom) //是否没有包含某矩阵形
+            public boolean quickReject(Rect r) //是否没和该矩形相交
+            public native boolean quickReject(int left, int top, int right, int bottom); //是否没和该矩形相交
+            public native boolean quickReject(Region rgn);  //是否没和该矩形相交
+
+            //几个平移变换的方法
+            public void translate(int dx, int dy)
+            public native void translate(int dx, int dy, Region dst);
+            public void scale(float scale) //hide
+            public native void scale(float scale, Region dst);//hide
+         *
+         */
+        Log.i(TAG,"region1 =="+region1.isEmpty() + " region2 ==" + region2.isEmpty());
     }
 }
