@@ -21,25 +21,25 @@ public class View4 extends View {
 
     public View4(Context context) {
         super(context);
-        initView();
+        init();
     }
 
     public View4(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initView();
+        init();
     }
 
     public View4(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initView();
+        init();
     }
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public View4(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        initView();
+        init();
     }
 
-    private void initView() {
+    private void init() {
         /**
          * //普通设置
          paint.setStrokeWidth (5);//设置画笔宽度
