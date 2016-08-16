@@ -18,6 +18,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    //解决编译时OutOfMemoryError
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
 }
 dependencies {
     compile 'com.android.support:support-v4:23.1.1'

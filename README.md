@@ -1,5 +1,8 @@
 # CustomViewLearning
 自定义View学习
+
+[根据此链接内容学习](http://blog.csdn.net/harvic880925/article/details/50995268)
+
 ### View1(绘图基础) ###
 
 ### View2（基本图形的绘制） ###
@@ -32,3 +35,12 @@
 - 构造Region
 - 使用SetPath() 构造不规则区域
 - 区域的合并、交叉等操作
+
+### View6（canvas 的变化与操作） ###
+- 平移（translate） translate函数其实实现的相当于平移坐标系，即平移坐标系的原点的位置。
+- 屏幕显示与Canvas关系
+- 旋转（rotate）
+- 缩放（scale）
+- 扭曲（skew）
+- 裁剪画布（clip系列函数）
+- 画布的保存与恢复
