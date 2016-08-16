@@ -15,9 +15,11 @@ import android.view.View;
  * Created by wentao on 2016/8/12.
  */
 public class View4 extends View {
+    private float baseLineY =100f;
 
     private Typeface typeface;
     private Paint paint;
+    private float baseLineX=0f;
 
     public View4(Context context) {
         super(context);
@@ -62,23 +64,23 @@ public class View4 extends View {
         paint.setStrokeWidth(1);
         paint.setAntiAlias(true);
         paint.setTextSize(60);//设置文字大小
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL);
         //5.更改文字字体
-        typeface=Typeface.createFromAsset(getContext().getApplicationContext().getAssets(),"jian_luobo.ttf");
-        paint.setTypeface(typeface);
+//        typeface=Typeface.createFromAsset(getContext().getApplicationContext().getAssets(),"jian_luobo.ttf");
+//        paint.setTypeface(typeface);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        String text="都说钱是王八蛋，可长得真好看";
+        String text="Irving Ryan is the best ! ! !";
         //1.绘图样式区别
-        paint.setStyle(Paint.Style.FILL);
-        canvas.drawText(text,50,100,paint); //填充样式
-        paint.setStyle(Paint.Style.STROKE);
-        canvas.drawText(text,50,200,paint); //描边
-        paint.setStyle(Paint.Style.FILL_AND_STROKE);
-        canvas.drawText(text,50,300,paint); //填充且描边
+//        paint.setStyle(Paint.Style.FILL);
+//        canvas.drawText(text,50,100,paint); //填充样式
+//        paint.setStyle(Paint.Style.STROKE);
+//        canvas.drawText(text,50,200,paint); //描边
+//        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+//        canvas.drawText(text,50,300,paint); //填充且描边
         //2.绘图样式及倾斜度
         //样式设置
 //        paint.setFakeBoldText(true);//设置是否为粗体文字
@@ -100,5 +102,17 @@ public class View4 extends View {
 //        path.addCircle(500,500,500, Path.Direction.CW);//顺时针
 //        canvas.drawPath(path,paint);
 //        canvas.drawTextOnPath(text,path,100,100,paint);
+        //6.基线与绘制位置（paint.setTextAlign(Paint.Align.XXX)）
+        //画基线
+        paint.setColor(Color.RED);
+        canvas.drawLine(baseLineX, baseLineY, 3000, baseLineY, paint);
+        //画文字
+        paint.setColor(Color.GREEN);
+        paint.setTextAlign(Paint.Align.LEFT); // -Align.LEFT 以文字整体的方块左边缘X为基点绘制
+                                                // -Align.CENTER 以文字整体的方块中间部位X为基点绘制
+                                                // -Align.RIGHT 以文字整体的方块右边缘X为基点绘制
+        canvas.drawText(text,baseLineX, baseLineY,paint);
+        //7.drawText的四线格与FontMetrics
+
     }
 }

@@ -30,6 +30,7 @@
 - 指定单个文字位置绘制
 - 按照路径绘制文字（参照View3）
 - 更改文字字体
+- 基线与绘制位置（paint.setTextAlign(Paint.Align.XXX)）
 
 ### View5（区域的绘制） ###
 - 构造Region
