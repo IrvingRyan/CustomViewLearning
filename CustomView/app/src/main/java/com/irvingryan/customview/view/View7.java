@@ -9,7 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- * 贝塞尔曲线的应用(完成简单的手绘)
+ * 贝塞尔曲线的应用(使用quadTo完成简单的手绘)
  * 参考文章地址  http://blog.csdn.net/harvic880925/article/details/50995587
  * Created by wentao on 2016/8/17.
  */
