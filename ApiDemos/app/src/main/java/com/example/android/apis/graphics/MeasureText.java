@@ -21,6 +21,9 @@ import android.graphics.*;
 import android.os.Bundle;
 import android.view.*;
 
+/**
+ * Marked by IrvingRyan
+ */
 public class MeasureText extends GraphicsActivity {
 
     @Override
@@ -59,7 +62,7 @@ public class MeasureText extends GraphicsActivity {
             mPaint = new Paint();
             mPaint.setAntiAlias(true);
             mPaint.setStrokeWidth(5);
-            mPaint.setStrokeCap(Paint.Cap.ROUND);
+            mPaint.setStrokeCap(Paint.Cap.SQUARE);
             mPaint.setTextSize(64);
             mPaint.setTypeface(Typeface.create(Typeface.SERIF,
                                                Typeface.ITALIC));

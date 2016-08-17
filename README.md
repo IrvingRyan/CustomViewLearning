@@ -31,6 +31,8 @@
 - 按照路径绘制文字（参照View3）
 - 更改文字字体
 - 基线与绘制位置（paint.setTextAlign(Paint.Align.XXX)）
+- drawText的四线格与FontMetrics
+- 所绘文字宽度、高度和最小矩形获取
 
 ### View5（区域的绘制） ###
 - 构造Region
