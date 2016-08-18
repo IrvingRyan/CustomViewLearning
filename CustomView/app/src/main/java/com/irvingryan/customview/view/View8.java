@@ -23,6 +23,7 @@ public class View8 extends View {
     public View8(Context context) {
         super(context);
         init();
+        startAnimation();
     }
 
     private void init() {

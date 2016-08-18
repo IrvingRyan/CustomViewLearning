@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import com.irvingryan.customview.view.View8;
+import com.irvingryan.customview.view.View9;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 //        View5 view=new View5(this);
 //        View6 view=new View6(this);
 //        View7 view=new View7(this);
-        View8 view=new View8(this);
+//        View8 view=new View8(this);
+        View9 view=new View9(this);
         root.addView(view,new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        view.startAnimation();
     }
 }

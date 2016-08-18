@@ -49,13 +49,25 @@
 - 画布的保存与恢复
 
 ### View7（贝塞尔曲线的应用(完成简单的手绘)） ###
-> 参考文章地址  [http://blog.csdn.net/harvic880925/article/details/50995587](http://blog.csdn.net/harvic880925/article/details/50995587)
+> 参考文章地址
+> [http://blog.csdn.net/harvic880925/article/details/50995587](http://blog.csdn.net/harvic880925/article/details/50995587)
 
 - quadTo()的基本使用方法
 - 绘制轨迹
 
 ### View8（贝塞尔曲线的应用(波浪动画效果)） ###
-> 参考文章地址  [http://blog.csdn.net/harvic880925/article/details/50995587](http://blog.csdn.net/harvic880925/article/details/50995587)
+> 参考文章地址 
+> [http://blog.csdn.net/harvic880925/article/details/50995587](http://blog.csdn.net/harvic880925/article/details/50995587)
 
 - 使用rQuadTo()绘制波浪线
 - 水波浪效果的实现
+
+### View9(Paint 的函数用法汇总) ###
+> 未演示的用法参考地址
+> [http://blog.csdn.net/harvic880925/article/details/51010839](http://blog.csdn.net/harvic880925/article/details/51010839)
+
+- 设置线冒 
+- 线条结合处效果
+- 路径效果 PathEffect
+- 自定义路径效果（实现箭头延路径移动动画）
+- 合并路径效果

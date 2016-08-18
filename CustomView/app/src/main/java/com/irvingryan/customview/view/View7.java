@@ -32,7 +32,8 @@ public class View7 extends View {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(2);
+        paint.setStrokeWidth(50);
+        paint.setStrokeCap(Paint.Cap.ROUND);//圆形线冒
         mPath = new Path();
     }
 
