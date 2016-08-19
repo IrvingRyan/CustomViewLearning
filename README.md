@@ -62,7 +62,7 @@
 - 使用rQuadTo()绘制波浪线
 - 水波浪效果的实现
 
-### View9(Paint 的函数用法汇总) ###
+### View9（Paint 的函数用法汇总） ###
 > 未演示的用法参考地址
 > [http://blog.csdn.net/harvic880925/article/details/51010839](http://blog.csdn.net/harvic880925/article/details/51010839)
 
@@ -71,3 +71,10 @@
 - 路径效果 PathEffect
 - 自定义路径效果（实现箭头延路径移动动画）
 - 合并路径效果
+
+### View10（ColorMatrix与滤镜效果） ###
+> 本章较难，部分使用的时候再具体研究矩阵的问题，参考地址
+> [http://blog.csdn.net/harvic880925/article/details/51187277](http://blog.csdn.net/harvic880925/article/details/51187277)
+
+- 色彩矩阵的基本构成原理
+- SaturationActivity对色彩饱和度、色彩旋转的调节
