@@ -13,6 +13,7 @@ import android.view.View;
 import com.irvingryan.customview.R;
 
 /**
+ * ColorMatrix与滤镜效果
  * Created by wentao on 2016/8/18.
  */
 public class View10 extends View {
@@ -37,7 +38,7 @@ public class View10 extends View {
         // 生成色彩矩阵
         colorMatrix = new ColorMatrix(new float[]{
                 1, 0, 0, 0, 0,//R
-                0, 1, 0, 0, 50,//G
+                0, 1, 0, 0, 0,//G
                 0, 0, 1, 0, 0,//B
                 0, 0, 0, 1, 0,//A 第五列矩阵代表增加的值
         });
@@ -48,7 +49,9 @@ public class View10 extends View {
                 0.213f, 0.715f, 0.072f, 0, 0,
                 0,       0,    0, 1, 0,
         });
-        colorMatrixColorFilter = new ColorMatrixColorFilter(blackMatrix);
+        //设置饱和度
+        colorMatrix.setSaturation(Float.MAX_VALUE);
+        colorMatrixColorFilter = new ColorMatrixColorFilter(colorMatrix);
     }
 
     @Override
