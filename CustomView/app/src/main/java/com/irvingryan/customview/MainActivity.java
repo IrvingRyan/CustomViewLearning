@@ -1,5 +1,6 @@
 package com.irvingryan.customview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
@@ -10,8 +11,9 @@ import com.irvingryan.customview.view.View10;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     @Bind(R.id.root)
     FrameLayout root;
@@ -34,7 +36,18 @@ public class MainActivity extends AppCompatActivity {
 //        View7 view=new View7(this);
 //        View8 view=new View8(this);
 //        View9 view=new View9(this);
-        View10 view=new View10(this);
-        root.addView(view,new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        View10 view = new View10(this);
+        root.addView(view, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    }
+
+    @OnClick(R.id.saturationBtn)
+    public void startSaturationActivity(){
+        Intent intent = new Intent(this, SaturationActivity.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.xfermodeBtn)
+    public void startXfermodeActivity(){
+        Intent intent = new Intent(this, XfermodeActivity.class);
+        startActivity(intent);
     }
 }

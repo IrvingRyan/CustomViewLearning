@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CustomView</string>
+    <string name="saturation">SaturationActivity</string>
+    <string name="xfermode">XfermodeActivity</string>
 </resources>
