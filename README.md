@@ -1,4 +1,4 @@
-# CustomViewLearning
+2# CustomViewLearning
 自定义View学习
 
 > 参考文章地址  [http://blog.csdn.net/harvic880925/article/details/50995268](http://blog.csdn.net/harvic880925/article/details/50995268)
@@ -78,3 +78,10 @@
 
 - 色彩矩阵的基本构成原理
 - SaturationActivity对色彩饱和度、色彩旋转的调节
+
+### View11（paint setXfermode方法的使用） ###
+> 参考文章地址 
+> [http://blog.csdn.net/harvic880925/article/details/51264653](http://blog.csdn.net/harvic880925/article/details/51264653)
+
+- AvoidXfermode的用法
+- PorterDuffXfermode的使用请查看ApiDemos Graphics/Xfermodes

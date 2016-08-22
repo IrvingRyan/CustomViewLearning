@@ -41,6 +41,7 @@ public class Xfermodes extends GraphicsActivity {
 
         p.setColor(0xFFFFCC44);
         c.drawOval(new RectF(0, 0, w*3/4, h*3/4), p);
+//        c.drawOval(new RectF(0, 0, w, h), p);
         return bm;
     }
 
@@ -51,7 +52,8 @@ public class Xfermodes extends GraphicsActivity {
         Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
 
         p.setColor(0xFF66AAFF);
-        c.drawRect(w/3, h/3, w*19/20, h*19/20, p);
+//        c.drawRect(w/3, h/3, w*19/20, h*19/20, p);
+        c.drawRect(0, 0, w, h, p);
         return bm;
     }
 
@@ -62,8 +64,8 @@ public class Xfermodes extends GraphicsActivity {
     }
 
     private static class SampleView extends View {
-        private static final int W = 64;
-        private static final int H = 64;
+        private static final int W = 200;
+        private static final int H = 200;
         private static final int ROW_MAX = 4;   // number of samples per row
 
         private Bitmap mSrcB;
@@ -119,11 +121,12 @@ public class Xfermodes extends GraphicsActivity {
 
             Paint labelP = new Paint(Paint.ANTI_ALIAS_FLAG);
             labelP.setTextAlign(Paint.Align.CENTER);
+            labelP.setTextSize(40);
 
             Paint paint = new Paint();
             paint.setFilterBitmap(false);
 
-            canvas.translate(15, 35);
+            canvas.translate(15, 85);
 
             int x = 0;
             int y = 0;
@@ -147,9 +150,9 @@ public class Xfermodes extends GraphicsActivity {
                                           Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
                                           Canvas.CLIP_TO_LAYER_SAVE_FLAG);
                 canvas.translate(x, y);
-                canvas.drawBitmap(mDstB, 0, 0, paint);
+                canvas.drawBitmap(mDstB,0, 0, paint);
                 paint.setXfermode(sModes[i]);
-                canvas.drawBitmap(mSrcB, 0, 0, paint);
+                canvas.drawBitmap(mSrcB,W/2f, H/2f, paint);
                 paint.setXfermode(null);
                 canvas.restoreToCount(sc);
 
@@ -162,7 +165,7 @@ public class Xfermodes extends GraphicsActivity {
                 // wrap around when we've drawn enough for one row
                 if ((i % ROW_MAX) == ROW_MAX - 1) {
                     x = 0;
-                    y += H + 30;
+                    y += H + 80;
                 }
             }
         }
