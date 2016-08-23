@@ -85,3 +85,11 @@
 
 - AvoidXfermode的用法
 - PorterDuffXfermode的使用请查看ApiDemos Graphics/Xfermodes
+
+### XfermodeActivity（paint 函数之setXfermode的应用） ###
+> 参考文章地址 
+> [http://blog.csdn.net/harvic880925/article/details/51284710](http://blog.csdn.net/harvic880925/article/details/51284710)
+
+- View12 （PorterDuffXfermode 各个模式的详解）
+- BookLightView（PorterDuff.Mode.LIGHTEN在实际中的运用)
+- TwitterView（PorterDuff.Mode.MULTIPLY在实际中的运用）

@@ -2992,7 +2992,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".graphics.Xfermodes" android:label="Graphics/Xfermodes">
+        <activity android:name=".graphics.Xfermodes" android:label="Graphics/Xfermodes"
+            android:hardwareAccelerated="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
