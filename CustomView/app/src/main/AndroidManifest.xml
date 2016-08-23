@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SaturationActivity" />
-        <activity android:name=".XfermodeActivity"></activity>
+        <activity android:name=".XfermodeActivity"
+            ></activity>
     </application>
 
 </manifest>
