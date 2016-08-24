@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
@@ -14,38 +13,38 @@ import android.view.View;
 import com.irvingryan.customview.R;
 
 /**
- * Created by wentao on 2016/8/23.
+ * SRC_IN的应用
+ * Created by wentao on 2016/8/24.
  */
-public class TwitterView extends View {
+public class CornerRoundView extends View {
 
-    private Bitmap dstBitmap;
-    private Bitmap srcBitmap;
     private Paint paint;
+    private Bitmap srcBitmap;
+    private Bitmap dstBitmap;
 
-    public TwitterView(Context context) {
+    public CornerRoundView(Context context) {
         super(context);
         init();
     }
 
-    public TwitterView(Context context, AttributeSet attrs) {
+    public CornerRoundView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
     private void init() {
-        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-        dstBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.twiter_bg,null);
-        srcBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.twiter_light,null);
+        setLayerType(LAYER_TYPE_SOFTWARE,null);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        dstBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dog_shade, null);
+        srcBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dog, null);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawColor(Color.BLACK);
         int layerId = canvas.saveLayer(0, 0, getWidth(), getHeight(), null, Canvas.ALL_SAVE_FLAG);
         canvas.drawBitmap(dstBitmap,0,0,paint);
-        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY));
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
         canvas.drawBitmap(srcBitmap,0,0,paint);
         paint.setXfermode(null);
         canvas.restoreToCount(layerId);

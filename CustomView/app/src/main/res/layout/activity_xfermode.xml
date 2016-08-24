@@ -3,10 +3,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0000ff"
+    android:orientation="vertical"
     tools:context="com.irvingryan.customview.XfermodeActivity">
-    <com.irvingryan.customview.view.View11
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/view11"/>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TwitterView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/booklight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BookLightView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/cornerround"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CornerRoundView"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/inverted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InvertedView"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/eraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EraserView"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/guaguaka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GuagakaView"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/view12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View12"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.irvingryan.customview.view.View12
+        android:id="@+id/view12View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.irvingryan.customview.view.TwitterView
+        android:id="@+id/twitterView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.irvingryan.customview.view.BookLightView
+        android:id="@+id/bookLightView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.irvingryan.customview.view.CornerRoundView
+        android:id="@+id/cornerRoundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.irvingryan.customview.view.InvertedView
+        android:id="@+id/invertedView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <com.irvingryan.customview.view.EraserView
+        android:id="@+id/eraserView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <com.irvingryan.customview.view.GuaguakaView
+            android:id="@+id/guaguakaView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
 </LinearLayout>
