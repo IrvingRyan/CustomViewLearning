@@ -93,3 +93,7 @@
 - View12 （PorterDuffXfermode 各个模式的详解）
 - BookLightView（PorterDuff.Mode.LIGHTEN在实际中的运用)
 - TwitterView（PorterDuff.Mode.MULTIPLY在实际中的运用）
+- CornerRoundView（SRC_IN的应用）
+- EraserView（SRC_IN实现橡皮擦功能）
+- InvertedView（SRC_IN实现倒影）
+- GuaguakaView（SRC_OUT实现刮刮奖效果）

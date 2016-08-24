@@ -82,9 +82,14 @@ public class View12 extends View {
             -Mode.DARKEN（变暗）
             -Mode.MULTIPLY(正片叠底)
             -Mode.OVERLAY（叠加）
-            -Mode.Mode.SCREEN（滤色）
+            -Mode.SCREEN（滤色）
+            -Mode.SRC（全部以源图像显示 ）
+            -Mode.SRC_IN（计算公式为：[Sa * Da, Sc * Da] ）
+            -Mode.SRC_OUT（计算公式为：[Sa * (1 - Da), Sc * (1 - Da)] ）
+            -Mode.SRC_OVER（源图像覆盖 ）
+            -Mode.SRC_ATOP（ [Da, Sc * Da + (1 - Sa) * Dc] 相对于SRC_IN会增加一定饱和度）
          */
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SCREEN));
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
         canvas.drawBitmap(srcBitmap,H/3f,W/3f, mPaint);
         canvas.restoreToCount(layerId);
     }

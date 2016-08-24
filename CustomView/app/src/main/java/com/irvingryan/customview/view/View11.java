@@ -50,7 +50,7 @@ public class View11 extends View {
         setLayerType(LAYER_TYPE_SOFTWARE,null);//禁用硬件加速
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.RED);
-        bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.dog);
+        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.dog);
         fBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.flower);
     }
 
