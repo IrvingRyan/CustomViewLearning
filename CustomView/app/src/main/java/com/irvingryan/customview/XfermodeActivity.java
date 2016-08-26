@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.irvingryan.customview.view.BookLightView;
+import com.irvingryan.customview.view.CocaColaView;
 import com.irvingryan.customview.view.CornerRoundView;
 import com.irvingryan.customview.view.EraserView;
 import com.irvingryan.customview.view.GuaguakaView;
@@ -49,6 +50,10 @@ public class XfermodeActivity extends AppCompatActivity implements View.OnClickL
     Button guaguaka;
     @Bind(R.id.guaguakaView)
     GuaguakaView guaguakaView;
+    @Bind(R.id.cocaCola)
+    Button cocaCola;
+    @Bind(R.id.cocaColaView)
+    CocaColaView cocaColaView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,7 @@ public class XfermodeActivity extends AppCompatActivity implements View.OnClickL
         view12.setOnClickListener(this);
         eraser.setOnClickListener(this);
         guaguaka.setOnClickListener(this);
+        cocaCola.setOnClickListener(this);
     }
 
     @Override
@@ -77,6 +83,7 @@ public class XfermodeActivity extends AppCompatActivity implements View.OnClickL
         view12View.setVisibility(View.GONE);
         eraserView.setVisibility(View.GONE);
         guaguakaView.setVisibility(View.GONE);
+        cocaColaView.setVisibility(View.GONE);
         switch (v.getId()) {
             case R.id.twitter:
                 twitterView.setVisibility(View.VISIBLE);
@@ -98,6 +105,9 @@ public class XfermodeActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.guaguaka:
                 guaguakaView.setVisibility(View.VISIBLE);
+                break;
+            case R.id.cocaCola:
+                cocaColaView.setVisibility(View.VISIBLE);
                 break;
         }
     }
