@@ -59,12 +59,23 @@
                 android:layout_height="wrap_content"
                 android:text="GuagakaView"
                 android:textAllCaps="false" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/cocaCola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CocaColaView"
+                android:textAllCaps="false" />
             <Button
                 android:id="@+id/view12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="View12"
                 android:textAllCaps="false" />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -104,6 +115,11 @@
         android:visibility="gone" />
     <com.irvingryan.customview.view.GuaguakaView
             android:id="@+id/guaguakaView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    <com.irvingryan.customview.view.CocaColaView
+            android:id="@+id/cocaColaView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone" />
