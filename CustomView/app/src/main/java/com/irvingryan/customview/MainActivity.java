@@ -50,4 +50,9 @@ public class MainActivity extends AppCompatActivity{
         Intent intent = new Intent(this, XfermodeActivity.class);
         startActivity(intent);
     }
+    @OnClick(R.id.canvasBtn)
+    public void startCanvasActivity(){
+        Intent intent = new Intent(this, CanvasActivity.class);
+        startActivity(intent);
+    }
 }
