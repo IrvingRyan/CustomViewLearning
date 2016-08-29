@@ -7,8 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SaturationActivity" />
-        <activity android:name=".XfermodeActivity"
-            ></activity>
+        <activity android:name=".XfermodeActivity" />
+        <activity android:name=".CanvasActivity"></activity>
     </application>
 
 </manifest>

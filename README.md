@@ -100,3 +100,6 @@
 - CocaColaView（实现可口可乐商标的波浪摆动 DST_IN）
 
 总结：DST 与 SRC的函数是两个相对的模式 ，可以通过调换绘图顺序实现相同的效果
+
+### CanvasActivity（Canvas与图层） ###
+- FlagView(canvas的save函数所有flag的含义)
