@@ -8,11 +8,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flag"
+            android:text="FlagView"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/qq"
+            android:text="QQView"/>
     </LinearLayout>
     <com.irvingryan.customview.view.FlagView
-        android:id="@+id/flag"
+        android:id="@+id/flagView"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <com.irvingryan.customview.view.QQView
+        android:id="@+id/qqView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
