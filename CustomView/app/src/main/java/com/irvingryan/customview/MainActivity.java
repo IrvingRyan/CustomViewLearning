@@ -8,10 +8,10 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.irvingryan.customview.activity.CanvasActivity;
-import com.irvingryan.customview.activity.ShadowActivity;
 import com.irvingryan.customview.activity.SaturationActivity;
+import com.irvingryan.customview.activity.ShadowActivity;
 import com.irvingryan.customview.activity.XfermodeActivity;
-import com.irvingryan.customview.view.View10;
+import com.irvingryan.customview.view.BlurMaskFilterView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity{
 //        View7 view=new View7(this);
 //        View8 view=new View8(this);
 //        View9 view=new View9(this);
-        View10 view = new View10(this);
+//        View10 view = new View10(this);
+        BlurMaskFilterView view=new BlurMaskFilterView(this);
         root.addView(view, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
 
