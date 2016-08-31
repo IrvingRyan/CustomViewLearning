@@ -54,6 +54,11 @@
 
     <com.irvingryan.customview.view.ShadowView
         android:id="@+id/shadowView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.irvingryan.customview.view.BitmapShadowView
+        android:id="@+id/bitmapShadowView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

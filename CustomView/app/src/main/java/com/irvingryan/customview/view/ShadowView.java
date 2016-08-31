@@ -49,7 +49,7 @@ public class ShadowView extends View {
         canvas.translate(0,200);
         canvas.drawRect(new Rect(20,20,100,100),paint);
         canvas.translate(0,200);
-        canvas.drawBitmap(bitmap,20,20,paint);
+        canvas.drawBitmap(bitmap,null,new Rect(0,0,400,400*getWidth()/getHeight()),paint);
     }
 
     public void addRadius(){
