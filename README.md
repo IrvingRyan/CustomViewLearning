@@ -108,3 +108,4 @@
 ### ShadowActivity（阴影效果的绘制） ###
 - 使用layer-list 绘制阴影效果
 - 自定义ShadowView绘制阴影（TextView,Button,EditView中的文字都具有阴影效果，可以直接在XML或者代码中设置）
+- BlurMaskFilterView（模糊（发散）效果展示）
