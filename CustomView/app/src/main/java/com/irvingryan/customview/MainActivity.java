@@ -7,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+import com.irvingryan.customview.activity.CanvasActivity;
+import com.irvingryan.customview.activity.ShadowActivity;
+import com.irvingryan.customview.activity.SaturationActivity;
+import com.irvingryan.customview.activity.XfermodeActivity;
 import com.irvingryan.customview.view.View10;
 
 import butterknife.Bind;
@@ -53,6 +57,11 @@ public class MainActivity extends AppCompatActivity{
     @OnClick(R.id.canvasBtn)
     public void startCanvasActivity(){
         Intent intent = new Intent(this, CanvasActivity.class);
+        startActivity(intent);
+    }
+    @OnClick(R.id.layerlistBtn)
+    public void startLayerlistActivity(){
+        Intent intent = new Intent(this, ShadowActivity.class);
         startActivity(intent);
     }
 }

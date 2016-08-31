@@ -1,10 +1,11 @@
-package com.irvingryan.customview;
+package com.irvingryan.customview.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.irvingryan.customview.R;
 import com.irvingryan.customview.view.BookLightView;
 import com.irvingryan.customview.view.CocaColaView;
 import com.irvingryan.customview.view.CornerRoundView;
