@@ -6,11 +6,13 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.irvingryan.customview.R;
@@ -43,6 +45,7 @@ public class QQView extends FrameLayout {
     private boolean mTouch;
     private TextView mTextView;
     private double distance=1;
+    private ImageView explosionView;
 
     public QQView(Context context) {
         super(context);
@@ -66,7 +69,12 @@ public class QQView extends FrameLayout {
         mTextView.setText("99+");
         mTextView.setTextColor(Color.CYAN);
         mTextView.setBackgroundResource(R.drawable.qq_dot);
+        explosionView = new ImageView(getContext());
+        explosionView.setLayoutParams(layoutParams);
+        explosionView.setImageResource(R.drawable.explosion_anim);
+        explosionView.setVisibility(GONE);
         addView(mTextView);
+        addView(explosionView);
         //圆圈半径
         radius = 25;
         DEFAULT_RADIUS=radius;
@@ -122,8 +130,14 @@ public class QQView extends FrameLayout {
                 break;
             case MotionEvent.ACTION_UP:
                 mTouch=false;
+                if (radius<=9){
+                    explosionView.setX(x1-explosionView.getWidth()/2);
+                    explosionView.setY(y1-explosionView.getHeight()/2);
+                    explosionView.setVisibility(VISIBLE);
+                    mTextView.setVisibility(GONE);
+                    ((AnimationDrawable)explosionView.getDrawable()).start();
+                }
                 radius=DEFAULT_RADIUS;
-//                startAnim();
                 break;
 
         }

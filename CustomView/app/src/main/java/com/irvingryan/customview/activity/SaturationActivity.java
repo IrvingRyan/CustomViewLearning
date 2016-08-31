@@ -1,4 +1,4 @@
-package com.irvingryan.customview;
+package com.irvingryan.customview.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,6 +12,8 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+
+import com.irvingryan.customview.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

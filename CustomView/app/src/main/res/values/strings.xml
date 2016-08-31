@@ -3,4 +3,5 @@
     <string name="saturation">SaturationActivity</string>
     <string name="xfermode">XfermodeActivity</string>
     <string name="canvas">CanvasActivity</string>
+    <string name="layerlist">LayerlistActivity</string>
 </resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ShadowActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shadow_one"
+        android:padding="10dp"
+        android:text="按钮阴影效果"
+        android:textColor="#ff0000"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shadow_two"
+        android:padding="10dp"
+        android:text="带selector的按钮"
+        android:textColor="#ff0000"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/radius"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="radius++" />
+
+    <Button
+        android:id="@+id/dx"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="dx++" />
+
+    <Button
+        android:id="@+id/dy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="dy++" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Developer"
+        android:shadowColor="#ff0000"
+        android:shadowDx="5"
+        android:shadowDy="10"
+        android:shadowRadius="5"/>
+
+    <com.irvingryan.customview.view.ShadowView
+        android:id="@+id/shadowView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

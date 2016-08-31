@@ -15,9 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SaturationActivity" />
-        <activity android:name=".XfermodeActivity" />
-        <activity android:name=".CanvasActivity"></activity>
+        <activity android:name=".activity.SaturationActivity" />
+        <activity android:name=".activity.XfermodeActivity" />
+        <activity android:name=".activity.CanvasActivity" />
+        <activity android:name=".activity.ShadowActivity"></activity>
     </application>
 
 </manifest>
