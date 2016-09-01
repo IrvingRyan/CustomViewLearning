@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,22 +44,28 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="dy++" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Android Developer"
         android:shadowColor="#ff0000"
         android:shadowDx="5"
         android:shadowDy="10"
-        android:shadowRadius="5"/>
+        android:shadowRadius="5"
+        android:text="Android Developer" />
 
     <com.irvingryan.customview.view.ShadowView
         android:id="@+id/shadowView"
-        android:visibility="gone"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
     <com.irvingryan.customview.view.BitmapShadowView
         android:id="@+id/bitmapShadowView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        app:src="@drawable/blog12"
+        app:shadowDx="10dp"
+        app:shadowDy="10dp"
+        app:shadowRadius="10" />
 </LinearLayout>
