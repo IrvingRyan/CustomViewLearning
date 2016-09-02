@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BitmapShadowView">
+        <attr name="shadowRadius" format="integer"/>
+        <attr name="shadowDx" format="dimension"/>
+        <attr name="shadowDy" format="dimension"/>
+        <attr name="shadowColor" format="color"/>
+        <attr name="src" format="reference"/>
+    </declare-styleable>
+</resources>
