@@ -1,4 +1,4 @@
-2# CustomViewLearning
+## CustomViewLearning ##
 自定义View学习
 
 > 参考文章地址  [http://blog.csdn.net/harvic880925/article/details/50995268](http://blog.csdn.net/harvic880925/article/details/50995268)
