@@ -62,9 +62,9 @@
 
     <com.irvingryan.customview.view.BitmapShadowView
         android:id="@+id/bitmapShadowView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:src="@drawable/blog12"
+        app:src="@mipmap/blog12"
         app:shadowDx="10dp"
         app:shadowDy="10dp"
         app:shadowRadius="10" />

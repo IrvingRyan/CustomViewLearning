@@ -26,8 +26,6 @@ public class BitmapShadowView extends View {
     private Paint paint;
     private Bitmap extractBitmap;
     private Bitmap srcBitmap;
-    private int width;
-    private int height;
     private Rect rect;
     private RectF sRect;
     private float radius;
@@ -65,53 +63,38 @@ public class BitmapShadowView extends View {
         srcBitmap = BitmapFactory.decodeResource(getResources(),src);
         //提取bitmap的透明度
         extractBitmap= srcBitmap.extractAlpha();
-        width = 400;
-        height = 400*extractBitmap.getWidth()/extractBitmap.getHeight();
-        rect = new Rect(0, 0, width, height);
-        sRect = new RectF(0+dx, 0+dy, width+dx, height+dy);
         blurMaskFilter = new BlurMaskFilter(radius, BlurMaskFilter.Blur.NORMAL);
+
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        Log.i(TAG, "onMeasure widthMeasureSpec mode== " + (MeasureSpec.getMode(widthMeasureSpec) == MeasureSpec.AT_MOST));
-        Log.i(TAG,"onMeasure heightMeasureSpec== "+MeasureSpec.getSize(widthMeasureSpec));
-        Log.i(TAG,"onMeasure widthMeasureSpec mode== "+(MeasureSpec.getMode(heightMeasureSpec)==MeasureSpec.EXACTLY));
-        Log.i(TAG,"onMeasure heightMeasureSpec== "+MeasureSpec.getSize(heightMeasureSpec));
+        int widthMeasureSpecMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMeasureSpecMode = MeasureSpec.getMode(heightMeasureSpec);
+        int measureWidth = MeasureSpec.getSize(widthMeasureSpec);
+        int measureHeight = MeasureSpec.getSize(heightMeasureSpec);
+        Log.i(TAG, "onMeasure widthMeasureSpec mode== " + (widthMeasureSpecMode == MeasureSpec.AT_MOST));
+        Log.i(TAG,"onMeasure heightMeasureSpec== "+measureWidth);
+        Log.i(TAG,"onMeasure widthMeasureSpec mode== "+(heightMeasureSpecMode==MeasureSpec.EXACTLY));
+        Log.i(TAG,"onMeasure heightMeasureSpec== "+measureHeight);
+        int width=srcBitmap.getWidth();
+        int height=srcBitmap.getHeight();
+        //通过设置MeasureDimension后 getWidth 和getHeight的值就为设置的值
+        setMeasuredDimension(widthMeasureSpecMode==MeasureSpec.EXACTLY?measureWidth:width,heightMeasureSpecMode==MeasureSpec.EXACTLY?measureHeight:height);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 //        paint.setShadowLayer(20,20,20,Color.GRAY);
+        int width=getWidth();
+        int height=getHeight();
+        rect = new Rect(0, 0, width, height);
+        sRect = new RectF(0+dx, 0+dy, width +dx, height +dy);
         paint.setMaskFilter(blurMaskFilter);
         canvas.drawBitmap(extractBitmap,null,sRect,paint);
         paint.setMaskFilter(null);
         canvas.drawBitmap(srcBitmap,null,rect,paint);
-    }
-
-    public float getRadius() {
-        return radius;
-    }
-
-    public void setRadius(float radius) {
-        this.radius = radius;
-    }
-
-    public float getDx() {
-        return dx;
-    }
-
-    public void setDx(float dx) {
-        this.dx = dx;
-    }
-
-    public float getDy() {
-        return dy;
-    }
-
-    public void setDy(float dy) {
-        this.dy = dy;
     }
 }
