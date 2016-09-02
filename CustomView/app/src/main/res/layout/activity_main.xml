@@ -1,37 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.irvingryan.customview.MainActivity">
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/saturationBtn"
-        android:textAllCaps="false"
-        android:text="@string/saturation"/>
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/saturation"
+        android:textAllCaps="false" />
+
+    <Button
         android:id="@+id/xfermodeBtn"
-        android:textAllCaps="false"
-        android:text="@string/xfermode"/>
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/xfermode"
+        android:textAllCaps="false" />
+
+    <Button
         android:id="@+id/canvasBtn"
-        android:textAllCaps="false"
-        android:text="@string/canvas"/>
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/canvas"
+        android:textAllCaps="false" />
+
+    <Button
         android:id="@+id/layerlistBtn"
-        android:textAllCaps="false"
-        android:text="@string/layerlist"/>
-    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/layerlist"
+        android:textAllCaps="false" />
+
+    <com.irvingryan.customview.view.MyLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/root">
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        android:background="#ffff00">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#00ff11"
+            android:text="text1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="#ff00ff"
+            android:text="text2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffff"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="text3" />
+    </com.irvingryan.customview.view.MyLayout>
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

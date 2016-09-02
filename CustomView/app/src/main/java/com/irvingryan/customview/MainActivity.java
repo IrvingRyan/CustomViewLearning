@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity{
 //        View8 view=new View8(this);
 //        View9 view=new View9(this);
 //        View10 view = new View10(this);
+//        BlurMaskFilterView view=new BlurMaskFilterView(this);
         BlurMaskFilterView view=new BlurMaskFilterView(this);
         root.addView(view, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
     }
